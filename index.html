@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parlez à Stéphane - Assistant Virtuel MindSearch</title>
+  <style>
+    :root {
+      --accent: #14B8A6;
+      --bg: #f9f9f9;
+      --text: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--accent);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .cta-btn {
+      background-color: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .cta-btn:hover {
+      background-color: #0d9488;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      main h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Assistant Stéphane</h1>
+    <p>Votre conseiller vocal chez MindSearch</p>
+  </header>
+
+  <main>
+    <h2>Posez votre question à tout moment</h2>
+    <p>
+      Stéphane est un assistant vocal intelligent disponible 24h/24 pour répondre à vos questions,
+      vous orienter, ou recueillir votre candidature.
+    </p>
+    <button class="cta-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Le micro est en bas à droite 👇</button>
+  </main>
+
+  <footer>
+    &copy; 2025 MindSearch · Tous droits réservés
+  </footer>
+
+  <!-- 🔽 VAPI Widget -->
+  <vapi-widget
+    public-key="e2a1c4eb-feb3-4e6b-8825-6c7637fd20d1"
+    assistant-id="1c05d30b-1729-4d7b-a2eb-bd779601ce85"
+    mode="voice"
+    theme="dark"
+    base-bg-color="#000000"
+    accent-color="#14B8A6"
+    cta-button-color="#000000"
+    cta-button-text-color="#ffffff"
+    border-radius="large"
+    size="full"
+    position="bottom-right"
+    title="Parlez à notre assistant virtuel Stéphane"
+    start-button-text="Commencer"
+    end-button-text="Terminer l'appel"
+    chat-first-message="Bonjour, comment puis-je vous aider aujourd’hui ?"
+    chat-placeholder="Posez votre question ici..."
+    voice-show-transcript="true"
+    consent-required="true"
+    consent-title="Conditions d'utilisation"
+    consent-content="En cliquant sur 'Accepter', vous consentez à l'enregistrement et au traitement de votre conversation, tel que décrit dans nos conditions générales."
+    consent-storage-key="vapi_widget_consent"
+  ></vapi-widget>
+
+  <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+</body>
+</html>
